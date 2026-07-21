@@ -1,5 +1,5 @@
 const mineflayer = require("mineflayer");
-const { mineflayer: mineflayerViewer } = require("prismarine-viewer");
+// const { mineflayer: mineflayerViewer } = require("prismarine-viewer");
 
 const bot = mineflayer.createBot({
   host: "127.0.0.1",
@@ -7,20 +7,20 @@ const bot = mineflayer.createBot({
   username: "IfeanyiBot",
   auth: "offline", // "microsoft",
    // password: '12345678',
-//   version: "1.21.11",
+  version: "1.21.11",
 });
 
 bot.once("spawn", () => { 
   console.log(`${bot.username} joined the server.`);
   console.log(`Position: ${bot.entity.position}`);
 
-  mineflayerViewer(bot, {
-    port: 3007,
-    firstPerson: false,
-    viewDistance: 6,
-  });
+  // mineflayerViewer(bot, {
+  //   port: 3007,
+  //   firstPerson: false,
+  //   viewDistance: 6,
+  // });
 
-  console.log("Open http://localhost:3007 in your browser.");
+  // console.log("Open http://localhost:3007 in your browser.");
 
   bot.chat("IfeanyiBot is online!");
 });
