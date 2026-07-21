@@ -1,5 +1,5 @@
 const mineflayer = require("mineflayer");
-const { mineflayer: mineflayerViewer } = require("prismarine-viewer");
+//const { mineflayer: mineflayerViewer } = require("prismarine-viewer");
 const {
   pathfinder,
   Movements,
@@ -40,7 +40,9 @@ const CONFIG = {
   targets: [
     {
       label: "Wood 1",
-      position: new Vec3(10, 64, 20),
+
+      position: new Vec3(4, 126, -88
+      ),
       allowedBlocks: [
         "oak_log",
         "birch_log",
@@ -48,16 +50,17 @@ const CONFIG = {
         "jungle_log",
         "acacia_log",
         "dark_oak_log",
+        "dirt",
       ],
     },
     {
       label: "Iron 1",
-      position: new Vec3(120, 63, -45),
+      position: new Vec3(4, 126, -88),
       allowedBlocks: ["iron_ore", "deepslate_iron_ore"],
     },
     {
       label: "Coal 1",
-      position: new Vec3(14, 64, 20),
+      position: new Vec3(4, 126, -88),
       allowedBlocks: ["coal_ore", "deepslate_coal_ore"],
     },
   ],
@@ -83,8 +86,8 @@ const bot = mineflayer.createBot({
   username: "IfeanyiBot",
   auth: "offline",
 
-  // Let Mineflayer detect the server version.
-  // version: "1.21.11",
+ // Let Mineflayer detect the server version.
+  version: "1.21.11",
 });
 
 bot.loadPlugin(pathfinder);
@@ -457,13 +460,13 @@ bot.once("spawn", () => {
 
   bot.pathfinder.setMovements(movements);
 
-  mineflayerViewer(bot, {
-    port: CONFIG.viewerPort,
-    firstPerson: false,
-    viewDistance: 6,
-  });
+ // mineflayerViewer(bot, {
+ //   port: CONFIG.viewerPort,
+ //   firstPerson: false,
+ //   viewDistance: 6,
+ // });
 
-  console.log(`Open http://localhost:${CONFIG.viewerPort} in your browser.`);
+//  console.log(`Open http://localhost:${CONFIG.viewerPort} in your browser.`);
 
   console.log('\nConfigure your target coordinates, then type "start".');
   console.log('Available terminal commands: "start", "stop", "status".\n');

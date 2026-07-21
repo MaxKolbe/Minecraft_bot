@@ -12,6 +12,8 @@
   "type": "commonjs",
   "dependencies": {
     "mineflayer": "^4.37.1",
-    "nodemon": "^3.1.14" 
+    "mineflayer-pathfinder": "^2.4.5",
+    "nodemon": "^3.1.14",
+    "vec3": "^0.2.0"
   }
 }
