@@ -460,14 +460,6 @@ bot.once("spawn", () => {
 
   bot.pathfinder.setMovements(movements);
 
- // mineflayerViewer(bot, {
- //   port: CONFIG.viewerPort,
- //   firstPerson: false,
- //   viewDistance: 6,
- // });
-
-//  console.log(`Open http://localhost:${CONFIG.viewerPort} in your browser.`);
-
   console.log('\nConfigure your target coordinates, then type "start".');
   console.log('Available terminal commands: "start", "stop", "status".\n');
 
